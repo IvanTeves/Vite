@@ -3,12 +3,12 @@ import { ItemCount } from "../components/itemCount/ItemCount";
 import { getBooks } from "../lib/books.requests";
 
 export const Detail = () => {
-  const [books, setBooks] = useState([]); // Inicializar el estado con un array vacío
+  const [books, setBooks] = useState([]); 
 
   useEffect(() => {
     getBooks()
       .then((res) => setBooks(res))
-      .catch((error) => console.log(error)); // Manejar los errores, si es necesario
+      .catch((error) => console.log(error)); 
   }, []);
 
   useEffect(() => {
@@ -16,11 +16,11 @@ export const Detail = () => {
   }, [books]);
 
   if (books.length === 0) {
-    // Podemos mostrar un mensaje de carga mientras se obtienen los libros
+ 
     return <p>Cargando libros...</p>;
   }
 
-  // Supongo que solo quieres mostrar los detalles del primer libro disponible
+ 
   const book = books[0];
 
   return (
@@ -54,9 +54,3 @@ export const Detail = () => {
     </div>
   );
 };
-
-// {(Books.price || 0).toLocalString('es-CO', 
-//         {minimumFractiondigits: 2 ,
-//         MaximumFractiondigits: 2
-        
-//         })}
