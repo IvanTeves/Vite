@@ -5,7 +5,7 @@ import '../Item/Item.css'
 export const ItemListContainer =({products,greeting}) =>{
 return (
 
-<div className="items">
+<div className="items" key={products.key}>
     {/* <h1 className="letra">{greeting} </h1> */}
 
     {products.map((product)=>(

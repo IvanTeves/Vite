@@ -17,13 +17,12 @@ export const Home = () => {
 
     return (
         <div>
-            Pagina Principal
             <Grid container spacing={0.5}>
-            <div>
+                <div>
                     
-                                 <ItemListContainer products= {products} greeting={"hola"}/>
+                <ItemListContainer products= {products} greeting={"hola"}/>
                    
-            </div>
+                </div>
             </Grid>
 
 
