@@ -84,3 +84,15 @@ body{
 .Detalles_Card{
   max-width: 480px;
 }
+
+.header{
+  display:flex;
+  justify-content: center;
+}
+
+.logo{
+  width: 7vw;
+  height: 7vh;
+  background-image: url(./icons/shopping.jpg);
+  background-size: cover;
+}

@@ -14,22 +14,18 @@ import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } 
 
 
  const router = createBrowserRouter(createRoutesFromElements(
-   <>
+   <Route element={<NavBar/>}>
      <Route path="/" element={<Home />} />
      <Route path="/item/:id" element={<Detail />} />
-   </>
+     <Route path="/category/:id" element={<div>Categoria</div> } />
+  </Route>
+   
  ))
 
 function App() {
   return (
     <>
-      <div className="page">
-        <NavBar />
-        <CartWidget />
-      </div>
-     
-       <RouterProvider router={router} />
-      
+       <RouterProvider router={router} /> 
      </>
   )
  }

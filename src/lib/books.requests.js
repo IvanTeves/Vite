@@ -40,9 +40,19 @@ const BOOKS = [
     }
 ];
 
+
 export const getBooks = () => {
     return new Promise ((res)=>{
         setTimeout(()=>{res(BOOKS)},2000)
+    }
+    )
+
+}
+
+export const getBook = (id) => {
+    const book = BOOKS.filter((book) => book.id === id)[0];
+    return new Promise ((res)=>{
+        setTimeout(()=>{res(book)},2000)
     }
     )
 
