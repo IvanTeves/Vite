@@ -11,13 +11,14 @@ import { Detail } from './pages/Detail'
 import { Grid } from '@mui/material'
 import { Item } from './components/Item/Item'
 import { createBrowserRouter, createRoutesFromElements, Route, RouterProvider } from 'react-router-dom'
+import { Category } from './pages/category'
 
 
  const router = createBrowserRouter(createRoutesFromElements(
    <Route element={<NavBar/>}>
      <Route path="/" element={<Home />} />
      <Route path="/item/:id" element={<Detail />} />
-     <Route path="/category/:id" element={<div>Categoria</div> } />
+     <Route path="/category/:id" element={<Category/> } />
   </Route>
    
  ))

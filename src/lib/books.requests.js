@@ -41,13 +41,18 @@ const BOOKS = [
 ];
 
 
-export const getBooks = () => {
-    return new Promise ((res)=>{
-        setTimeout(()=>{res(BOOKS)},2000)
-    }
-    )
-
-}
+export const getBooks = (id) => {
+    const _books = id
+      ? BOOKS.filter((book) => book.category.toLowerCase() === id)
+      : BOOKS;
+  
+    return new Promise((res) => {
+      setTimeout(() => {
+        res(_books);
+      }, 500);
+    });
+  };
+  
 
 export const getBook = (id) => {
     const book = BOOKS.filter((book) => book.id === id)[0];
